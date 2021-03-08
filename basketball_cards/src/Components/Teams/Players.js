@@ -7,7 +7,7 @@ function Players(props) {
         <div>
             <div>
                 <p>Name: {playerInfo.first_name} {playerInfo.last_name}</p>
-                <p>Team: {playerInfo.team.full_name}</p>
+                <p>Team Name: {playerInfo.team.full_name}</p>
             </div>
         </div>
     )
