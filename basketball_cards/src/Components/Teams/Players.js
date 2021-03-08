@@ -5,9 +5,10 @@ function Players(props) {
 
     return (
         <div>
-            <h2>Players Page</h2>
-            <div>{playerInfo.first_name} {playerInfo.last_name}</div>
-            <div>{playerInfo.team.full_name}</div>
+            <div>
+                <p>Name: {playerInfo.first_name} {playerInfo.last_name}</p>
+                <p>Team: {playerInfo.team.full_name}</p>
+            </div>
         </div>
     )
 }

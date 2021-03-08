@@ -5,7 +5,7 @@ import axios from 'axios';
 function TeamPage() {
     const [players, setPlayers] = useState([]);
     const [teamName, setTeamName] = useState('');
-    
+
     const baseUrl = 'https://www.balldontlie.io/api/v1/players'
 
     useEffect(() => {
@@ -22,6 +22,7 @@ function TeamPage() {
     return (
         <div>
             <h2>TeamPage</h2>
+            <h3>Players Page</h3>
             {
                 players.filter((playerInfo) => {
                     return playerInfo.team.full_name === 'Indiana Pacers';
