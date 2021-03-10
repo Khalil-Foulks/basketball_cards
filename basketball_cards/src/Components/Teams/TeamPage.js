@@ -47,6 +47,7 @@ function TeamPage() {
 
     const baseUrl = 'https://www.balldontlie.io/api/v1/players'
 
+
     useEffect(() => {
         axios.get(baseUrl + '?page=0&per_page=100')
         .then(res => {
@@ -78,7 +79,10 @@ function TeamPage() {
                 players.filter((playerInfo) => {
                     return playerInfo.team.full_name === value;
                 }).map((playerInfo) => (
-                    <Players key={playerInfo.id} playerInfo={playerInfo}/>
+                    <div>
+                        <img key={playerInfo.last_name} src={`http://loodibee.com/wp-content/uploads/nba-${playerInfo.team.city}-${playerInfo.team.name}-logo.png`.toLowerCase()}/>
+                        <Players key={playerInfo.id} playerInfo={playerInfo}/>
+                    </div>
                 ))
             }
         </div>

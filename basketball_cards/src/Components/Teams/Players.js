@@ -6,8 +6,13 @@ function Players(props) {
     return (
         <div>
             <div>
-                <p>Name: {playerInfo.first_name} {playerInfo.last_name}</p>
+                <img 
+                    src='https://cdn.nba.com/headshots/nba/latest/1040x760/203954.png' 
+                    alt='player'
+                />
+                <p>{playerInfo.first_name} {playerInfo.last_name}</p>
                 <p>Team Name: {playerInfo.team.full_name}</p>
+                <p>Position: {playerInfo.position ? playerInfo.position : 'N/A'}</p>
             </div>
         </div>
     )
