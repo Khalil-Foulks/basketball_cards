@@ -3,9 +3,40 @@ import Players from './Players';
 import axios from 'axios';
 
 function TeamPage() {
-    const [players, setPlayers] = useState([]);
-    const [teamName, setTeamName] = useState(['Atlanta Hawks','Boston Celtics','Brooklyn Nets','Charlotte Hornets','Chicago Bulls','Cleveland Cavaliers','Dallas Mavericks','Denver Nuggets','Detroit Pistons','Golden State Warriors','Houston Rockets','Indiana Pacers','LA Clippers','Los Angeles Lakers','Memphis Grizzlies','Miami Heat','Milwaukee Bucks','Minnesota Timberwolves','New Orleans Pelicans','New York Knicks','Oklahoma City Thunder','Orlando Magic','Philadelphia 76ers','Phoenix Suns','Portland Trail Blazers','Sacramento Kings','San Antonio Spurs','Toronto Raptors','Utah Jazz','Washington Wizards']);
+    const teamName = [
+        'Atlanta Hawks',
+        'Boston Celtics',
+        'Brooklyn Nets',
+        'Charlotte Hornets',
+        'Chicago Bulls',
+        'Cleveland Cavaliers',
+        'Dallas Mavericks',
+        'Denver Nuggets',
+        'Detroit Pistons',
+        'Golden State Warriors',
+        'Houston Rockets',
+        'Indiana Pacers',
+        'LA Clippers',
+        'Los Angeles Lakers',
+        'Memphis Grizzlies',
+        'Miami Heat',
+        'Milwaukee Bucks',
+        'Minnesota Timberwolves',
+        'New Orleans Pelicans',
+        'New York Knicks',
+        'Oklahoma City Thunder',
+        'Orlando Magic',
+        'Philadelphia 76ers',
+        'Phoenix Suns',
+        'Portland Trail Blazers',
+        'Sacramento Kings',
+        'San Antonio Spurs',
+        'Toronto Raptors',
+        'Utah Jazz',
+        'Washington Wizards',
+    ]
 
+    const [players, setPlayers] = useState([]);
     const [value, setValue] = useState(teamName[0])
 
     const Add = teamName.map(Add => Add)
