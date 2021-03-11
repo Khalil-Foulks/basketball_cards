@@ -59,6 +59,14 @@ function TeamPage() {
         })
     }, []);
 
+    const logoUrl = () => {
+        const arr = value.split(' ')
+        const city = arr[0]
+        const team = arr[1]
+        return `http://loodibee.com/wp-content/uploads/nba-${city}-${team}-logo.png`.toLowerCase()
+    }
+
+
     return (
         <div>
             <h2>{value} Page</h2>
@@ -74,13 +82,14 @@ function TeamPage() {
                     )
                 }
             </select>
+            
+            <img key={logoUrl()} alt= 'logo' src={logoUrl()}/>                    
 
             {
                 players.filter((playerInfo) => {
                     return playerInfo.team.full_name === value;
                 }).map((playerInfo) => (
                     <div>
-                        <img key={playerInfo.last_name} src={`http://loodibee.com/wp-content/uploads/nba-${playerInfo.team.city}-${playerInfo.team.name}-logo.png`.toLowerCase()}/>
                         <Players key={playerInfo.id} playerInfo={playerInfo}/>
                     </div>
                 ))
