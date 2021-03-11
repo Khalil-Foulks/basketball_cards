@@ -68,7 +68,7 @@ function TeamPage() {
 
 
     return (
-        <div>
+        <div style={{backgroundImage: `url(${logoUrl()})`, backgroundRepeat:'no-repeat'}}>
             <h2>{value} Page</h2>
             <select
                 onChange={e => handleClick(e)}
@@ -82,8 +82,6 @@ function TeamPage() {
                     )
                 }
             </select>
-            
-            <img key={logoUrl()} alt= 'logo' src={logoUrl()}/>                    
 
             {
                 players.filter((playerInfo) => {
