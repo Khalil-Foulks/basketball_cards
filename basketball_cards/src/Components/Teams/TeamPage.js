@@ -42,7 +42,6 @@ function TeamPage() {
     const Add = teamName.map(Add => Add)
     const handleClick = (e) => {
         setValue(teamName[e.target.value])
-        // console.log(value)
     }
 
     const baseUrl = 'https://www.balldontlie.io/api/v1/players'
